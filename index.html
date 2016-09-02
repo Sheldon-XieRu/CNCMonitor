@@ -16,9 +16,11 @@
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+
     <![endif]-->
 </head>
-<body>
+<body ng-app="cncMonitor">
 <!--导航-->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -152,9 +154,9 @@
                         <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
                     </a>
                     <ul id="systemSetting" class="nav nav-list secondmenu collapse" style="height: 0px;">
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;在线维修人员</a></li>
+                        <li><a href="#/onlineWorker"><i class="glyphicon glyphicon-user"></i>&nbsp;在线维修人员</a></li>
                         <li><a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;离线维修人员</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;日志查看</a></li>
+                        <li><a href="#/diary"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;日志查看</a></li>
                     </ul>
                 </li>
                 <li>
@@ -186,7 +188,7 @@
                     <a href="#dicSetting" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-bold"></i>
                         数据分析工具
-                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        <span class=" glyphicon glyphicon-chevron-toggle"></span>
                     </a>
                     <ul id="dicSetting" class="nav nav-list secondmenu collapse">
                         <li><a href="#"><i class="glyphicon glyphicon-text-width"></i>&nbsp;</a></li>
@@ -202,8 +204,8 @@
 
             </ul>
         </div>
-        <div class="col-md-10">
-            这里是内容
+        <div class="col-md-10" >
+            <div ng-view></div>
         </div>
     </div>
 </div>
@@ -213,5 +215,9 @@
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
